@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Medical Diagnostics: A Comparative Cost-Benefit Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 60vh;
+            width: 80vw;
+            max-width: 900px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-700">AI in Medical Diagnostics</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#abstract" class="text-gray-600 hover:text-teal-600 transition duration-300">Abstract</a>
+                <a href="#findings" class="text-gray-600 hover:text-teal-600 transition duration-300">Findings</a>
+                <a href="#conclusion" class="text-gray-600 hover:text-teal-600 transition duration-300">Conclusion</a>
+            </div>
+            <div class="md:hidden">
+                <select onchange="location = this.value;" class="bg-white border border-gray-300 rounded-md p-2">
+                    <option value="#abstract">Abstract</option>
+                    <option value="#findings">Findings</option>
+                    <option value="#conclusion">Conclusion</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Title and Author -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-teal-700 mb-4">AI in Medical Diagnostics: A Comparative Cost-Benefit Analysis</h1>
+            <p class="text-xl text-gray-600">Author: Luqman Bin Fahad</p>
+        </section>
+
+        <!-- Abstract Section -->
+        <section id="abstract" class="mb-16 bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-teal-500 pb-2">Abstract</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Healthcare systems worldwide face mounting pressure from aging populations, rising disease burden, and resource constraints. This comprehensive meta-analysis examines the diagnostic accuracy, speed, and cost-effectiveness of artificial intelligence (AI)-powered diagnostic tools compared to traditional human-led diagnosis, with particular focus on disparities between high-income and low- and middle-income countries (LMICs). Based on systematic review of over 200 studies from PubMed, Google Scholar, arXiv, and WHO databases, the evidence reveals significant potential for AI to revolutionize medical diagnostics while highlighting substantial implementation challenges across different economic contexts.
+            </p>
+        </section>
+
+        <!-- Findings Section -->
+        <section id="findings" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Key Findings</h2>
+
+            <!-- Diagnostic Accuracy -->
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
+                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Diagnostic Accuracy: AI vs. Human Performance</h3>
+                <p class="text-lg leading-relaxed text-gray-700 mb-8">
+                    The analysis reveals a complex landscape of performance. While AI shows great promise, its accuracy varies significantly across medical specialties when compared to human physicians, especially those with expert-level experience. AI excels in pattern-heavy fields like pathology but may generate more false positives in others like radiology.
+                </p>
+                <div class="chart-container">
+                    <canvas id="accuracyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Speed and Efficiency -->
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
+                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Speed and Efficiency: Dramatic Time Reductions</h3>
+                <p class="text-lg leading-relaxed text-gray-700 mb-8">
+                    One of the most compelling arguments for AI adoption is the dramatic improvement in efficiency. AI significantly reduces the time required for diagnosis across various domains, from radiology to pathology, leading to substantial workload reductions and potential cost savings for healthcare systems.
+                </p>
+                <div class="chart-container">
+                    <canvas id="savingsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Cost-Effectiveness -->
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-12">
+                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Cost-Effectiveness: A Global Divide</h3>
+                <p class="text-lg leading-relaxed text-gray-700 mb-8">
+                    The economic impact of AI in diagnostics varies dramatically across different income levels. While high-income countries face high implementation costs, low- and middle-income countries (LMICs) have the most to gain, with potential cost savings of 50-90%. However, these are also the regions facing the greatest barriers, such as lack of infrastructure and funding.
+                </p>
+                <div class="chart-container">
+                    <canvas id="healthcareMetricsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion" class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-teal-500 pb-2">Conclusion & Policy Implications</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                This meta-analysis demonstrates that AI diagnostic tools offer substantial improvements in accuracy, speed, and cost-effectiveness compared to traditional human-led diagnosis, with the greatest potential benefits for low- and middle-income countries despite significant implementation challenges.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                The inverse relationship between country income level and potential AI benefits creates both an opportunity and a challenge for global health equity. Successful AI implementation will require coordinated international efforts that address infrastructure development, capacity building, and algorithm adaptation for diverse populations and healthcare contexts.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+                The promise of AI in medical diagnostics is substantial, but realizing this potential equitably across global healthcare systems will require thoughtful policy interventions that address not only technological development but also the fundamental infrastructure and capacity building needs that underpin successful implementation.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 Luqman Bin Fahad. All rights reserved.</p>
+            <p class="text-sm text-gray-400">Interactive webpage based on the research paper "AI in Medical Diagnostics: A Comparative Cost-Benefit Analysis".</p>
+        </div>
+    </footer>
+
+    <script>
+        // Chart 1: AI vs Human Diagnostic Accuracy
+        const accuracyCtx = document.getElementById('accuracyChart').getContext('2d');
+        new Chart(accuracyCtx, {
+            type: 'bar',
+            data: {
+                labels: ['General AI', 'Pathology AI', 'MRI AI', 'Dermatology AI', 'Chest X-ray'],
+                datasets: [
+                    {
+                        label: 'AI Sensitivity %',
+                        data: [87, 96.3, 94.7, 92, 90],
+                        backgroundColor: 'rgba(20, 184, 166, 0.7)',
+                        borderColor: 'rgba(15, 118, 110, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'AI Specificity %',
+                        data: [77, 93.3, 92.9, 66, 70],
+                        backgroundColor: 'rgba(244, 63, 94, 0.7)',
+                        borderColor: 'rgba(190, 18, 60, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Human Sensitivity %',
+                        data: [79, 77, 76.3, 64, null], // Null for Chest X-ray as per data
+                        backgroundColor: 'rgba(13, 148, 136, 0.5)',
+                        borderColor: 'rgba(13, 148, 136, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Human Specificity %',
+                        data: [73, 73, 100, 72, null], // Null for Chest X-ray as per data
+                        backgroundColor: 'rgba(75, 85, 99, 0.5)',
+                        borderColor: 'rgba(55, 65, 81, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Accuracy %'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Medical Specialty'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'AI vs Human Diagnostic Accuracy',
+                        font: { size: 18 }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
+                    }
+                }
+            }
+        });
+
+        // Chart 2: AI Time Reduction & Cost Savings
+        const savingsCtx = document.getElementById('savingsChart').getContext('2d');
+        new Chart(savingsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['AI Diagnosis', 'AI Treatment', 'Radiology', 'Pathology', 'Medical Imaging'],
+                datasets: [
+                    {
+                        label: 'Time Reduction %',
+                        data: [27.2, 58.5, 27.2, 75, 90],
+                        backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                        borderColor: 'rgba(37, 99, 235, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Cost Savings ($k/day est.)',
+                        data: [2.5, 21, null, null, null], // Simplified values for visualization
+                        backgroundColor: 'rgba(239, 68, 68, 0.8)',
+                        borderColor: 'rgba(220, 38, 38, 1)',
+                        type: 'line',
+                        fill: false,
+                        yAxisID: 'y1',
+                        tension: 0.1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Time Reduction %'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Savings ($k)'
+                        },
+                        grid: {
+                            drawOnChartArea: false // only draw grid for primary axis
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'AI Time Reduction & Cost Savings',
+                        font: { size: 18 }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Healthcare Metrics by Income Level
+        const healthcareCtx = document.getElementById('healthcareMetricsChart').getContext('2d');
+        new Chart(healthcareCtx, {
+            type: 'bubble',
+            data: {
+                datasets: [
+                    {
+                        label: 'High Income',
+                        data: [{ x: 6528, y: 3, r: 25 }],
+                        backgroundColor: 'rgba(20, 184, 166, 0.6)'
+                    },
+                    {
+                        label: 'Upper-Middle Income',
+                        data: [{ x: 1060, y: 1.8, r: 18 }],
+                        backgroundColor: 'rgba(244, 63, 94, 0.6)'
+                    },
+                    {
+                        label: 'Low-Middle Income',
+                        data: [{ x: 275, y: 1.2, r: 12 }],
+                        backgroundColor: 'rgba(13, 148, 136, 0.6)'
+                    },
+                    {
+                        label: 'Low Income',
+                        data: [{ x: 50, y: 0.8, r: 8 }],
+                        backgroundColor: 'rgba(75, 85, 99, 0.6)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Healthcare Workers / 1k Population'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Health Expenditure per Capita ($)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Healthcare Metrics by Country Income Level',
+                        font: { size: 18 }
+                    },
+                     tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                const point = context.raw;
+                                label += `(Exp: $${point.x}, Workers: ${point.y}/1k)`;
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
